@@ -9,9 +9,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="./assets/image/logo2-removebg-preview.png">
         <title>ATKD ChildCare</title>
-        <link rel="stylesheet" href="/ATKD_Project/parent/css/parenthome.css">
-        <link rel="stylesheet" href="/ATKD_Project/parent/css/childprofile.css">
-        <link rel="stylesheet" href="/ATKD_Project/parent/css/childfb.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/parent/css/parenthome.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/parent/css/childprofile.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/parent/css/childfb.css">
     </head>
 
     <body>
@@ -20,13 +20,13 @@
                 <div class="left-side-menu">
                     <div class="vertical-menu">
                         <div class="user-welcome">
-                            <img class="user-img" src="/ATKD_Project/parent/img/userImg/dummy-user-img.png" style="width: 80px; height: 80px;" alt="">
+                            <img class="user-img" src="${pageContext.request.contextPath}/parent/img/userImg/dummy-user-img.png" style="width: 80px; height: 80px;" alt="">
                             <p>${sessionScope.account.first_name} ${sessionScope.account.last_name}</p>
                         </div>
                         <div class="menu-item-container">
                             <ul class="item-lists">
                                 <li class="menu-item current1">
-                                    <a href="/ATKD_Project/parent/childdetails.jsp">Child Information</a>
+                                    <a href="${pageContext.request.contextPath}/parent/childdetails.jsp">Child Information</a>
                                 </li>
                                 <li class="menu-item">
                                     <a href="#">Parent Information</a>
@@ -47,7 +47,7 @@
                         <div class="kid-profile">
                             <div class="kid-profile_header">
                                 <div class="img-section">
-                                    <img src="/ATKD_Project/parent/img/userImg/dummy-user-img.png" alt="">
+                                    <img src="${pageContext.request.contextPath}/parent/img/userImg/dummy-user-img.png" alt="">
                                 </div>
                                 <c:set var="mainchild" value="${sessionScope.mainchild}" />
                                 <div class="personel-section">

@@ -1,4 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/admin/OneDrive/Desktop/kinder2852025/web/parent/parentprofile.jsp</file>
+            <file>file:/C:/Users/admin/OneDrive/Desktop/kinder2852025/web/calculate.jsp</file>
+            <file>file:/C:/Users/admin/OneDrive/Desktop/kinder2852025/web/index.jsp</file>
+            <file>file:/C:/Users/admin/OneDrive/Desktop/kinder2852025/src/java/controller/parent/ChildDetailServlet.java</file>
+            <file>file:/C:/Users/admin/OneDrive/Desktop/kinder2852025/web/parent/childregister.jsp</file>
+            <file>file:/C:/Users/admin/OneDrive/Desktop/kinder2852025/src/java/controller/parent/ChildDetailControl.java</file>
+            <file>file:/C:/Users/admin/OneDrive/Desktop/kinder2852025/web/parent/parentupdateprofile.jsp</file>
+            <file>file:/C:/Users/admin/OneDrive/Desktop/kinder2852025/src/java/controller/parent/ChildFbServlet.java</file>
+            <file>file:/C:/Users/admin/OneDrive/Desktop/kinder2852025/web/ForgetPassword.jsp</file>
+            <file>file:/C:/Users/admin/OneDrive/Desktop/kinder2852025/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Users/admin/OneDrive/Desktop/kinder2852025/web/parent/childdetails.jsp</file>
+            <file>file:/C:/Users/admin/OneDrive/Desktop/kinder2852025/web/parent/childfb.jsp</file>
+            <file>file:/C:/Users/admin/OneDrive/Desktop/kinder2852025/web/ResetPassword.jsp</file>
+            <file>file:/C:/Users/admin/OneDrive/Desktop/kinder2852025/web/parent/childprofile.jsp</file>
+            <file>file:/C:/Users/admin/OneDrive/Desktop/kinder2852025/web/changepassword.jsp</file>
+            <file>file:/C:/Users/admin/OneDrive/Desktop/kinder2852025/src/java/controller/parent/ChildRegisterServlet.java</file>
+            <file>file:/C:/Users/admin/OneDrive/Desktop/kinder2852025/src/java/controller/LoginServlet.java</file>
+            <file>file:/C:/Users/admin/OneDrive/Desktop/kinder2852025/web/register.jsp</file>
+            <file>file:/C:/Users/admin/OneDrive/Desktop/kinder2852025/src/java/controller/ChangePasswordServlet.java</file>
+            <file>file:/C:/Users/admin/OneDrive/Desktop/kinder2852025/web/index.html</file>
+            <file>file:/C:/Users/admin/OneDrive/Desktop/kinder2852025/web/login-google.jsp</file>
+            <file>file:/C:/Users/admin/OneDrive/Desktop/kinder2852025/web/login.jsp</file>
+            <file>file:/C:/Users/admin/OneDrive/Desktop/kinder2852025/src/java/controller/parent/ChildProfileServlet.java</file>
+            <file>file:/C:/Users/admin/OneDrive/Desktop/kinder2852025/web/EnterOtp.jsp</file>
+        </group>
+    </open-files>
 </project-private>

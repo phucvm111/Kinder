@@ -7,14 +7,14 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="/ATKD_Project/homepage/assets/image/logo2-removebg-preview.png">
+        <link rel="icon" href="${pageContext.request.contextPath}/assets/image/logo2-removebg-preview.png">
         <title>ATKD ChildCare - Child Register</title>
-        <link rel="stylesheet" href="/ATKD_Project/homepage/parent/css/parenthome.css">
-        <link rel="stylesheet" href="/ATKD_Project/homepage/parent/css/childprofile.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/parent/css/parenthome.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/parent/css/childprofile.css">
         <script src="https://kit.fontawesome.com/67b5c45612.js" crossorigin="anonymous"></script>
         <script src="js/childdetails.js"></script>
-        <link rel="stylesheet" href="/ATKD_Project/homepage/parent/css/childdetails.css">
-        <link rel="stylesheet" href="/ATKD_Project/homepage/parent/css/childregister.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/parent/css/childdetails.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/parent/css/childregister.css">
         <style>
 
         </style>
@@ -28,28 +28,28 @@
                 <div class="left-side-menu">
                     <div class="vertical-menu">
                         <div class="user-welcome">
-                            <img class="user-img" src="/ATKD_Project/homepage/parent/img/userImg/dummy-user-img.png" style="width: 80px; height: 80px;" alt="">
+                            <img class="user-img" src="${pageContext.request.contextPath}/parent/img/userImg/dummy-user-img.png" style="width: 80px; height: 80px;" alt="">
                             <p>${sessionScope.account.firstName} ${sessionScope.account.lastName}</p>
                         </div>
                         <div class="menu-item-container">
                             <ul class="item-lists">
                                 <li class="menu-item">
-                                    <a href="/ATKD_Project/homepage/childdetailservlet">Child Information</a>
+                                    <a href="${pageContext.request.contextPath}/childdetailservlet">Child Information</a>
                                 </li>
                                 <li class="menu-item">
-                                    <a href="/ATKD_Project/homepage/parent/parentprofile.jsp">Parent Information</a>
+                                    <a href="${pageContext.request.contextPath}/parent/parentprofile.jsp">Parent Information</a>
                                 </li>
                                 <li class="menu-item  current1">
-                                    <a href="/ATKD_Project/homepage/parent/childregister.jsp">Child Register</a>
+                                    <a href="${pageContext.request.contextPath}/parent/childregister.jsp">Child Register</a>
                                 </li>
                                 <li class="menu-item  current1">
-                                    <a href="/ATKD_Project/homepage/parent/changepassword">Change Password</a>
+                                    <a href="${pageContext.request.contextPath}/parent/changepassword">Change Password</a>
                                 </li>
                             </ul>
                         </div>
                         <div style="border-top: 3px solid gray;"></div>
                         <div style="position: absolute;margin-top: 1vh; margin-left: 40px">
-                            <input type="button" class="log-out_button" onclick="window.location.replace('/ATKD_Project/homepage/logout')" value="Log out"/>
+                            <input type="button" class="log-out_button" onclick="window.location.replace('${pageContext.request.contextPath}/homepage/logout')" value="Log out"/>
                         </div>
                     </div>
                 </div>
@@ -62,7 +62,7 @@
                     </div>
                 </c:if>
                 <c:if test="${!classlist.isEmpty()}">
-                    <form action="/ATKD_Project/homepage/childregister" method="POST">
+                    <form action="${pageContext.request.contextPath}/childregister" method="POST">
                         <div class="child-register">
                             <div class="page-content">
                                 <div class="kid-register">
@@ -116,7 +116,7 @@
 
                                                         <div class="form-check">
                                                             <div class="img-gender" >
-                                                                <img src="/ATKD_Project/homepage/parent/img/userImg/images.jpg" alt="">
+                                                                <img src="${pageContext.request.contextPath}/parent/img/userImg/images.jpg" alt="">
                                                                 <p style="padding-top: 10px;padding-left: 10px;padding-right: 10px">
                                                                     Male
                                                                 </p>
@@ -126,7 +126,7 @@
                                                     </div>
                                                     <div class="form-check" style="padding-left: 80px">
                                                         <div class="img-gender">
-                                                            <img src="/ATKD_Project/homepage/parent/img/userImg/download.png" alt="">
+                                                            <img src="${pageContext.request.contextPath}/parent/img/userImg/download.png" alt="">
                                                             <p style="padding-top: 10px;padding-left: 10px;padding-right: 10px">
                                                                 Female
                                                             </p>
@@ -153,7 +153,7 @@
                                             <div class="mb-6" style="margin-top: 30px; margin-bottom: 30px; padding-left: 250px ">
                                                 <input type="button" class="button" onclick="openPopup()" value="Confirm"/>
                                                 <div class="popup" id="popup">
-                                                    <img src="/ATKD_Project/homepage/parent/img/icon/tick.png">
+                                                    <img src="${pageContext.request.contextPath}/parent/img/icon/tick.png">
                                                     <h2>Confirm registration ?</h2>
                                                     <input type="button" class="cancel_button" onclick="closePopup()" value="Cancel">
                                                     <input style="margin-left: 60px;" type="submit" class="confirm_button"  value="Confirm">
