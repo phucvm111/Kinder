@@ -43,7 +43,7 @@
                                     <a href="${pageContext.request.contextPath}/parent/childregister.jsp">Child Register</a>
                                 </li>
                                 <li class="menu-item  current1">
-                                    <a href="${pageContext.request.contextPath}/parent/changepassword">Change Password</a>
+                                    <a href="${pageContext.request.contextPath}/changepassword">Change Password</a>
                                 </li>
                             </ul>
                         </div>
