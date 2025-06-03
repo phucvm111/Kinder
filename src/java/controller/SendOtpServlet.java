@@ -61,7 +61,7 @@ public class SendOtpServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        //processRequest(request, response);
     }
 
     /**
@@ -83,8 +83,9 @@ public class SendOtpServlet extends HttpServlet {
         int otp = 100000 + new Random().nextInt(900000);
         boolean found = false;
         for (String acmail : accounts) {
-            if (acmail.equals(email)) {
+            if (email!=null && email.equals(acmail)) {
                 found = true;
+             
             }
         }
         if (found == true) {

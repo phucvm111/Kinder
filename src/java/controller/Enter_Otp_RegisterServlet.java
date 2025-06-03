@@ -14,9 +14,9 @@ import jakarta.servlet.http.HttpSession;
 
 /**
  *
- * @author Admin
+ * @author ACE
  */
-public class LogoutServlet extends HttpServlet {
+public class Enter_Otp_RegisterServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -30,15 +30,15 @@ public class LogoutServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try ( PrintWriter out = response.getWriter()) {
+        try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet LogoutServlet</title>");
+            out.println("<title>Servlet Enter_Otp_RegisterServlet</title>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet LogoutServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet Enter_Otp_RegisterServlet at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -56,11 +56,7 @@ public class LogoutServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-//        processRequest(request, response);
-        HttpSession session = request.getSession();
-        session.removeAttribute("account");
-        session.removeAttribute("emailregister");
-        response.sendRedirect("homepage");
+        processRequest(request, response);
     }
 
     /**
@@ -72,10 +68,37 @@ public class LogoutServlet extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
+  protected void doPost(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+
+    HttpSession session = request.getSession();
+    String otpInput = request.getParameter("otp");
+    Object otpInSession = session.getAttribute("otpregister");
+
+   
+    if (otpInSession == null || otpInput == null || otpInput.isEmpty()) {
+        request.setAttribute("otpfalse", "Please input OTP");
+        request.getRequestDispatcher("Enter_otp_register.jsp").forward(request, response);
+        return;
     }
+
+    try {
+        int otpUser = Integer.parseInt(otpInput);        
+        int otpSession = (int) otpInSession;             
+
+        if (otpUser == otpSession) {
+            response.sendRedirect("register");
+        } else {
+            request.setAttribute("otpfalse", "OTP incorrect");
+            request.getRequestDispatcher("Enter_otp_register.jsp").forward(request, response);
+        }
+    } catch (NumberFormatException e) {
+        request.setAttribute("otpfalse", "OTP must a number");
+        request.getRequestDispatcher("Enter_otp_register.jsp").forward(request, response);
+    }
+}
+
+
 
     /**
      * Returns a short description of the servlet.

@@ -71,17 +71,33 @@ public class EnterOTPServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //processRequest(request, response);
+
         HttpSession session = request.getSession();
-        int otpsession = (int) session.getAttribute("otp");
-        String otp = request.getParameter("otpinput");
-        if (otpsession == Integer.parseInt(otp)) {
-            response.sendRedirect("ResetPassword.jsp");
-        } else {
-            request.setAttribute("optfalse", "OTP incorrect");
+        Object otpSessionObj = session.getAttribute("otp");
+        String otpInput = request.getParameter("otpinput");
+
+        // Check if session OTP or input is missing
+        if (otpSessionObj == null || otpInput == null || otpInput.isEmpty()) {
+            request.setAttribute("otpfalse", "Please enter the OTP");
+            request.getRequestDispatcher("EnterOtp.jsp").forward(request, response);
+            return;
+        }
+
+        try {
+            int otpSession = (int) otpSessionObj;
+            int otpUser = Integer.parseInt(otpInput);
+
+            if (otpSession == otpUser) {
+                response.sendRedirect("ResetPassword.jsp");
+            } else {
+                request.setAttribute("otpfalse", "OTP is incorrect");
+                request.getRequestDispatcher("EnterOtp.jsp").forward(request, response);
+            }
+
+        } catch (NumberFormatException e) {
+            request.setAttribute("otpfalse", "OTP must be a number");
             request.getRequestDispatcher("EnterOtp.jsp").forward(request, response);
         }
-        
     }
 
     /**

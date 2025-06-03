@@ -664,15 +664,7 @@
                             </span>
                         </div>
 
-                        <!-- Email -->
-                        <div class="wrap-input100 validate-input">
-                            <input class="input100" type="text" name="email" id="email" placeholder="Email"
-                                   title="Must contain @" required />
-                            <span class="focus-input100"></span>
-                            <span class="symbol-input100"><i class="fa-solid fa-envelope"></i>
-                            </span>
-
-                        </div>
+                    
                         <!-- DOB -->
                         <div class="wrap-input100 validate-input">
                             <input class="input100" type="date" name="dob" id="dob" required />

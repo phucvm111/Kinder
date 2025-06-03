@@ -29,7 +29,7 @@
             width: 100%;
             display: flex; /* Sử dụng Flexbox để căn chỉnh các phần tử */
             justify-content: space-between; /* Đẩy logo sang trái, menu ra giữa, avatar sang phải */
-            align-items: center;  Căn giữa theo chiều dọc 
+            align-items: center;  
             padding: 10px 20px;
             background-color: white; /* Đảm bảo có màu nền */
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);

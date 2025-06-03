@@ -6,6 +6,7 @@
 package controller;
 
 import dal.AccountDAO;
+import jakarta.mail.Session;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
@@ -78,7 +79,7 @@ public class RegisterServlet extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charset=UTF-8");
-
+        HttpSession session=request.getSession();
         String fname = request.getParameter("fname");
         String lname = request.getParameter("lname");
         String googleId = request.getParameter("googleId");
@@ -92,12 +93,12 @@ public class RegisterServlet extends HttpServlet {
         }
         String address = request.getParameter("address");
         String phone = request.getParameter("phone");
-        String email = request.getParameter("email");
+        String email = (String)session.getAttribute("emailregister");
         String dob = request.getParameter("dob");
         String password = request.getParameter("password");
         String password2 = request.getParameter("password2");
 
-        HttpSession session = request.getSession(true);
+     
 
         AccountDAO d = new AccountDAO();
         Account a = new Account();

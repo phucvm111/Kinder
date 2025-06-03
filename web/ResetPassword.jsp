@@ -1,4 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -98,7 +100,10 @@
 
         <div class="container">
             <h2>🔒 Reset Password</h2>
-            <p style="color: red">${error}</p>
+            <c:if test="${not empty error}">
+                <p style="color: red">${error}</p>
+            </c:if>
+
             <form action="resetpassword" method="post">
                 <input type="password" name="newPassword" placeholder="new password" required />
 
@@ -114,7 +119,7 @@
                 </div>
 
                 <input type="password" name="confirmPassword" placeholder="confirm password" required />
-                <input type="submit" value="Xác nhận" />
+                <input type="submit" value="Confirm " />
             </form>
             <div class="footer">
                 © 2025 Safety and Security

@@ -43,7 +43,7 @@
     <form action="enterotp" method="post">
         <label>Enter the OTP sent to your email:</label>
         <input type="text" name="otpinput" required placeholder="Enter OTP">
-        <p style="color: red">${optfalse}</p>
+        <p style="color: red">${otpfalse}</p>
         <input type="submit" value="Verify OTP">
     </form>
 </div>

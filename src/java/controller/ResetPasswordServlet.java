@@ -98,6 +98,7 @@ public class ResetPasswordServlet extends HttpServlet {
                 request.getRequestDispatcher("ResetPassword.jsp").forward(request, response);
             }
             else{
+                d.changePassword(email, newpassword);
                 response.sendRedirect("login");
             }
 
